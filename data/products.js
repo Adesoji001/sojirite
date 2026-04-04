@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -656,5 +656,22 @@ const products = [
       "apparel",
       "mens"
     ]
-  }
+  },
+    {
+    id: "id001",
+    image: "images/products/electric-glass-and-steel-hot-water-kettle.webp",
+    name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+    rating: {
+      stars: 4.0,
+      count: 127
+    },
+    priceCents: 3098,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel",
+      "electric",
+      "kettle"
+    ]
+  },
 ];
