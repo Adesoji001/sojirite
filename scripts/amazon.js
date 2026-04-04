@@ -47,7 +47,7 @@ function renderHomePage(){
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart">
+          <div class="added-to-cart js-added-to-cart-${product.id}">
             <img src="images/icons/checkmark.png">
             Added
           </div>
@@ -67,11 +67,22 @@ renderHomePage();
 // this button helps to push to array and also update the cart quantity on the  amazon page.
 
 const buttonElement = document.querySelectorAll('.js-add-to-cart-button');
+
 buttonElement.forEach((button)=>{
 button.addEventListener('click',()=>{
   const productId=button.dataset.productId;   
     addToCart(productId);
     updateCartQuantity();
+    products.forEach((product)=>{
+      const displayToolPik=document.querySelector(`.js-added-to-cart-${productId}`);
+        if(product.id===productId){
+          displayToolPik.classList.add('toolpik');
+                setInterval(()=>{
+                  displayToolPik.classList.remove('toolpik');
+                },2000);
+        }
+    });
+                 
 });
 });
 
