@@ -209,3 +209,19 @@
   margin-top: 11px;
   margin-bottom: 15px;
 }
+.update-quantity, .save-button{
+  width: 30px;
+  display: none;
+}
+.is-editing .update-quantity{
+  display: initial;
+}
+.is-editing .save-button{
+  display: initial;
+}
+.is-editing .update-quantity-link{
+  display: none;
+}
+.is-editing .quantity-label{
+  display: none;
+}

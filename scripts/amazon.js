@@ -3,9 +3,11 @@ import {cart, addToCart,saveStorage} from '../data/cart.js';
 
 
 //this function render the data present in the product array on the amazon page.
+
 function renderHomePage(){
   let displayPage='';
   const displayHtml=document.querySelector('.js-product-grid');
+ 
   products.forEach((product)=>{
       const html=`
                <div class="product-container">
@@ -58,8 +60,12 @@ function renderHomePage(){
         </div>     
       `;
       displayPage+=html;
+
   });
-    displayHtml.innerHTML=displayPage;
+    displayHtml.innerHTML = displayPage;
+     if (!displayHtml) {
+        return;
+     }
 }
 
 renderHomePage();
@@ -79,7 +85,7 @@ button.addEventListener('click',()=>{
           displayToolPik.classList.add('toolpik');
                 setInterval(()=>{
                   displayToolPik.classList.remove('toolpik');
-                },2000);
+                },1000);
         }
     });
                  
