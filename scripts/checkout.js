@@ -171,7 +171,7 @@ const saveButton=document.querySelectorAll('.js-save-button');
   
    checkOutHeader.innerHTML=`
           Checkout (<a class="return-to-home-link"
-            href="amazon.html">${checkOutQuantity} items</a>)            
+            href="index.html">${checkOutQuantity} items</a>)            
           `;
           
          return checkOutQuantity;
